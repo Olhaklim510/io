@@ -3,10 +3,10 @@ package com.company;
 import java.io.*;
 
 class ReaderPhoneNumbers {
-    private static final String ABSOLUTE_PATH = "C:\\Users\\olgak\\IdeaProjects\\io\\src\\main\\resources\\file.txt";
+    private static final String RELATIVE_PATH = "src/main/resources/file.txt";
 
     public static void main(String[] args) {
-        File file = new File(ABSOLUTE_PATH);
+        File file = new File(RELATIVE_PATH);
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String phoneNumber = reader.readLine();

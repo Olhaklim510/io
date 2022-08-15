@@ -6,12 +6,12 @@ import java.io.*;
 import java.util.ArrayList;
 
 class UsersFile {
-    private static final String ABSOLUTE_PATH_FOR_READING = "C:\\Users\\olgak\\IdeaProjects\\io\\src\\main\\resources\\file_with_users_read.txt";
-    private static final String ABSOLUTE_PATH_FOR_WRITING = "C:\\Users\\olgak\\IdeaProjects\\io\\src\\main\\resources\\file_with_users_write.txt";
+    private static final String RELATIVE_PATH_FOR_READING = "src/main/resources/file_with_users_read.txt";
+    private static final String RELATIVE_PATH_FOR_WRITING = "src/main/resources/file_with_users_write.txt";
 
     //reading
     public static void main(String[] args) {
-        File fileRead = new File(ABSOLUTE_PATH_FOR_READING);
+        File fileRead = new File(RELATIVE_PATH_FOR_READING);
         ArrayList<User> listOfUsers = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileRead))) {
@@ -32,7 +32,7 @@ class UsersFile {
         }
 
     //writing
-        File fileWrite = new File(ABSOLUTE_PATH_FOR_WRITING);
+        File fileWrite = new File(RELATIVE_PATH_FOR_WRITING);
         checkIfFileAvailable(fileWrite);
 
         Gson gson=new GsonBuilder().setPrettyPrinting().create();

@@ -4,10 +4,10 @@ import java.io.*;
 import java.util.*;
 
 class CountWords {
-    private static final String ABSOLUTE_PATH = "C:\\Users\\olgak\\IdeaProjects\\io\\src\\main\\resources\\words.txt";
+    private static final String RELATIVE_PATH = "src/main/resources/words.txt";
 
     public static void main(String[] args) {
-        File file = new File(ABSOLUTE_PATH);
+        File file = new File(RELATIVE_PATH);
         HashMap<String, Integer> hashMap = new HashMap<>();
         Integer count = null;
         ArrayList<String> arrayWords = new ArrayList<>();
